@@ -10,7 +10,7 @@ impl Game {
     pub fn new() -> Self {
         Self {
             board: init_board(),
-            turn: Color:White,
+            turn: Color::White,
         }
     }
 
@@ -20,7 +20,7 @@ impl Game {
         }
 
         let piece_option = self.board[from.0][from.1];
-        let piece_option.is_none() {
+        if piece_option.is_none() {
             return Err("No piece at the given position".into());
         }
         let piece = piece_option.unwrap();
